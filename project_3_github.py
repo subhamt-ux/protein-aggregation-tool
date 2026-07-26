@@ -63,7 +63,7 @@ def aggregation_scores(filename_tsv:str, window_length:int):
     return most_aggregation_prone
 
 if __name__ == "__main__":
-    df = aggregation_scores(filename_tsv = "human_proteins_3.tsv", window_length = 7)
+    df = aggregation_scores(filename_tsv = "small_enough.tsv", window_length = 7)
     print("Top 1% Most Aggregation Prone Proteins")
     print(df.loc[:,["Protein names","Avg Hydrophobic Value",'Max Agg.',"Composite Score"]])
 
